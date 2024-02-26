@@ -5,18 +5,20 @@
 //  Created by Andrii Vivcharenko on 26.02.2024.
 //
 
+
 import SwiftUI
+import ARKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            NavigationLink(destination: ARObjectView()) {
+                Text("Place Object View")
+            }
         }
-        .padding()
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD86372E2B8CDA6F00D1C651 /* Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = FD86372D2B8CDA6F00D1C651 /* Chair.usdz */; };
+		FD8637302B8CE27000D1C651 /* Circle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = FD86372F2B8CE27000D1C651 /* Circle.usdz */; };
+		FD8637322B8CE5FB00D1C651 /* ARSessionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8637312B8CE5FB00D1C651 /* ARSessionWrapper.swift */; };
 		FDAE09452B8CBC9600671D7B /* arkit_testsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE09442B8CBC9600671D7B /* arkit_testsApp.swift */; };
 		FDAE09472B8CBC9600671D7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE09462B8CBC9600671D7B /* ContentView.swift */; };
 		FDAE09492B8CBC9700671D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE09482B8CBC9700671D7B /* Assets.xcassets */; };
 		FDAE094D2B8CBC9700671D7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE094C2B8CBC9700671D7B /* Preview Assets.xcassets */; };
+		FDAE09552B8CBD2F00671D7B /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE09542B8CBD2F00671D7B /* ARKit.framework */; platformFilter = ios; };
+		FDAE09572B8CBD6C00671D7B /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE09562B8CBD6C00671D7B /* ARViewContainer.swift */; };
+		FDAE09592B8CBDA700671D7B /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE09582B8CBDA700671D7B /* ARView.swift */; };
+		FDAE095B2B8CC02E00671D7B /* ARObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE095A2B8CC02E00671D7B /* ARObjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD86372D2B8CDA6F00D1C651 /* Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair.usdz; sourceTree = "<group>"; };
+		FD86372F2B8CE27000D1C651 /* Circle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Circle.usdz; sourceTree = "<group>"; };
+		FD8637312B8CE5FB00D1C651 /* ARSessionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionWrapper.swift; sourceTree = "<group>"; };
 		FDAE09412B8CBC9600671D7B /* arkit-tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arkit-tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE09442B8CBC9600671D7B /* arkit_testsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arkit_testsApp.swift; sourceTree = "<group>"; };
 		FDAE09462B8CBC9600671D7B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDAE09482B8CBC9700671D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDAE094A2B8CBC9700671D7B /* arkit_tests.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = arkit_tests.entitlements; sourceTree = "<group>"; };
 		FDAE094C2B8CBC9700671D7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDAE09542B8CBD2F00671D7B /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/ARKit.framework; sourceTree = DEVELOPER_DIR; };
+		FDAE09562B8CBD6C00671D7B /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		FDAE09582B8CBDA700671D7B /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		FDAE095A2B8CC02E00671D7B /* ARObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDAE09552B8CBD2F00671D7B /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +53,7 @@
 			children = (
 				FDAE09432B8CBC9600671D7B /* arkit-tests */,
 				FDAE09422B8CBC9600671D7B /* Products */,
+				FDAE09532B8CBD2F00671D7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,7 +70,13 @@
 			children = (
 				FDAE09442B8CBC9600671D7B /* arkit_testsApp.swift */,
 				FDAE09462B8CBC9600671D7B /* ContentView.swift */,
+				FDAE09562B8CBD6C00671D7B /* ARViewContainer.swift */,
+				FD8637312B8CE5FB00D1C651 /* ARSessionWrapper.swift */,
+				FDAE095A2B8CC02E00671D7B /* ARObjectView.swift */,
+				FDAE09582B8CBDA700671D7B /* ARView.swift */,
 				FDAE09482B8CBC9700671D7B /* Assets.xcassets */,
+				FD86372F2B8CE27000D1C651 /* Circle.usdz */,
+				FD86372D2B8CDA6F00D1C651 /* Chair.usdz */,
 				FDAE094A2B8CBC9700671D7B /* arkit_tests.entitlements */,
 				FDAE094B2B8CBC9700671D7B /* Preview Content */,
 			);
@@ -67,6 +89,14 @@
 				FDAE094C2B8CBC9700671D7B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDAE09532B8CBD2F00671D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE09542B8CBD2F00671D7B /* ARKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDAE094D2B8CBC9700671D7B /* Preview Assets.xcassets in Resources */,
+				FD8637302B8CE27000D1C651 /* Circle.usdz in Resources */,
+				FD86372E2B8CDA6F00D1C651 /* Chair.usdz in Resources */,
 				FDAE09492B8CBC9700671D7B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDAE09472B8CBC9600671D7B /* ContentView.swift in Sources */,
+				FDAE09592B8CBDA700671D7B /* ARView.swift in Sources */,
+				FDAE095B2B8CC02E00671D7B /* ARObjectView.swift in Sources */,
+				FD8637322B8CE5FB00D1C651 /* ARSessionWrapper.swift in Sources */,
 				FDAE09452B8CBC9600671D7B /* arkit_testsApp.swift in Sources */,
+				FDAE09572B8CBD6C00671D7B /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +305,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = Test;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +344,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = Test;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
