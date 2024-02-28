@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OpenAI
 
 struct ARObjectView: View {
     
@@ -31,18 +32,28 @@ struct ARObjectView: View {
             .accentColor(isObjectPlaced ? .green : .gray)
             .id(isObjectPlaced)
 
-            if isObjectPlaced {
+            HStack {
+                if isObjectPlaced {
 
-                Button("Delete Object") {
-                    self.deleteObject()
-                }.padding()
-            } else {
-                Button("Place Object") {
-                    self.placeObject()
-                }.padding()
+                    Button("Delete Object") {
+                        self.deleteObject()
+                    }.padding().disabled(true)
+                } else {
+                    Button("Place Object") {
+                        self.placeObject()
+                    }.padding().disabled(true)
+                }
+
+                Button("Request GPT4V") {
+                    sessionWrapper.requestGpt4V() { response in
+                        print(response)
+                    }
+                }.disabled(true)
             }
             
             
+        }.onDisappear {
+            sessionWrapper.deinitialize()
         }
     }
     
@@ -53,6 +64,8 @@ struct ARObjectView: View {
     func deleteObject() {
         self.isObjectPlaced = false
     }
+
+
 }
 
 struct ARObjectView_Previews: PreviewProvider {
